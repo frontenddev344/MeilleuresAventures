@@ -48,39 +48,4 @@ AOS.init({
         $('#newcookies').show();
     }
 });
-
-// Video error handling
-$(document).ready(function() {
-    // Handle video loading errors
-    $('video').on('error', function() {
-        console.log('Video failed to load:', this.src);
-        // Show fallback image
-        $(this).hide();
-        $(this).siblings('.video-fallback').show();
-    });
-    
-    // Handle video loading success
-    $('video').on('loadeddata', function() {
-        console.log('Video loaded successfully:', this.src);
-        $(this).siblings('.video-fallback').hide();
-    });
-    
-    // Fallback for browsers that don't support video autoplay
-    $('video').each(function() {
-        var video = this;
-        var playPromise = video.play();
-        
-        if (playPromise !== undefined) {
-            playPromise.then(function() {
-                // Video started playing successfully
-                $(video).siblings('.video-fallback').hide();
-            }).catch(function(error) {
-                // Video failed to play, show fallback
-                console.log('Video autoplay failed:', error);
-                $(video).hide();
-                $(video).siblings('.video-fallback').show();
-            });
-        }
-    });
-});
  
