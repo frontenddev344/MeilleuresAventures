@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+    <link rel="stylesheet" href="css/aos.css">   
+    <link rel="stylesheet" href="css/styles.css">	
+    <title>Évasions à enjeux élevés</title>
+    <style>
+        /* Tp section  CSS Start*/
+    
+        .mobile-view {
+            display: none;
+        }
+    
+        .site-header {
+            z-index: 999999;
+        }
+    
+        .tp-bottom-text-wrapper {
+            padding: 1.25rem 0;
+        }
+    
+        .tp-bottom-text-wrapper h3 {
+            color: #000;
+            margin-bottom: 1rem;
+        }
+    
+        .top-list-wrap {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 1.25rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #0c1317;
+            margin: 1.25rem 0;
+        }
+    
+        .toplist-left {
+            width: 47%;
+        }
+    
+        .tp-logo {
+            height: 5rem;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            padding: 10px;
+        }
+    
+        .tp-logo a {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            overflow: hidden;
+        }
+    
+        .rating-wrap p {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+    
+        .rating-wrap {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.75rem 0;
+        }
+    
+        .rating-txt p span,
+        .votes-txt p span {
+            display: block;
+            font-weight: 700;
+        }
+    
+        .tp-bottom-text-wrapper p {
+            color: #000;
+            font-size: 1rem;
+        }
+    
+        .tp-bottom-text-wrapper ul li {
+            margin-bottom: 1rem;
+        }
+    
+        .toplist-right {
+            width: 50%;
+        }
+    
+        .toplist-heading {
+            text-align: center;
+        }
+    
+        .toplist-heading h4 {
+            font-size: 22px;
+            line-height: 1.1;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 0.625rem;
+            font-weight: 800;
+        }
+    
+        .toplist-heading p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #fff;
+            font-weight: 500;
+            max-width: 11.25rem;
+            margin: 0 auto;
+        }
+    
+        .top-list-btn {
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+    
+        .tp-cards-section {
+            padding: 1.875rem 0;
+        }
+    
+        .tp-cards {
+            background-color: #000000;
+            padding: 1.25rem;
+            border-radius: 10px;
+            color: #fff;
+            margin-bottom: 1.25rem;
+        }
+    
+        .tp-banner {
+            position: relative;
+            height: 18rem;
+            background-position: center;
+            background-size: contain;
+            padding: 5.625rem 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+    
+        .tp-banner:after {
+            content: "";
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0 0 0/70%);
+            background-blend-mode: multiply;
+        }
+    
+        .tp-banner-text-group h2 {
+            color: #fff;
+            text-align: center;
+            padding: 0 0.9375rem;
+            font-size: 1.875rem;
+            margin: 0 auto;
+            max-width: 21.875rem;
+            margin-top: 1rem;
+        }
+    
+        .tp-banner-text {
+            z-index: 1111;
+            position: relative;
+        }
+    
+        .casino-section h2 {
+            color: #fff;
+            text-align: center;
+            padding: 1.875rem 0;
+            font-size: 1.875rem;
+        }
+    
+        .rating-txt p span,
+        .votes-txt p span {
+            font-size: 0.9375rem;
+        }
+    
+        .top-list-btn .shopbtn {
+            padding: 12px 34px;
+        }
+    
+        .top-list-btn .btn {
+            background: transparent;
+            border-color: #ff8e8c;
+            color: #ff8e8c;
+    
+        }
+    
+        .Stars {
+            font-size: 20px;
+            font-family: "Arial", sans-serif;
+            position: relative;
+            display: inline-block;
+        }
+    
+        .Stars::before {
+            content: "★★★★★";
+            letter-spacing: 3px;
+            background: linear-gradient(90deg, #fc0 var(--percent), #ccc var(--percent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+    
+        .Stars.Stars--rating99::before {
+            --percent: 99%;
+        }
+    
+        .tp-logo.logo_tonybet {
+            background: #1e1d1d;
+        }
+    
+        .tp-logo.logo_ivibet {
+            background: #eeeff4;
+        }
+    
+        .tp-logo.logo_twentybets {
+            background: #074145;
+        }
+    
+        .tp-logo.logo_twentybet {
+            background: #091d35;
+        }
+    
+        .tp-logo.logo_woocasino {
+            background-color: #010101;
+        }
+    
+        .tp-logo.logo_bizzo {
+            background-color: #1a1a1a;
+        }
+    
+        .tp-logo.logo_betovo {
+            background-color: #000;
+        }
+    
+        .tp-logo.logo_jetforjet {
+            background-color: #121328;
+        }
+    
+        .tp-logo.logo_goldspin {
+            background-color: #0000;
+            border: 1px solid #fff;
+        }
+    
+        .tp-logo.logo_spinit {
+            background-color: #000;
+        }
+    
+        /* TP media query start  */
+    
+        /* media query 575 */
+        @media(max-width:575px) {
+    
+            .desktop-version {
+                display: block ;
+            }
+    
+            .mobile-view {
+                display: none;
+            }
+    
+            #newcookies {
+                display: block;
+            }
+    
+            .disclaimer {
+                display: none;
+            }
+    
+            .tp-logo {
+                max-width: 250px;
+            }
+    
+            .top-list-wrap {
+                padding: 20px 40px;
+            }
+    
+            .top-list-wrap {
+                padding: 20px;
+            }
+    
+        }
+    
+        /* media query 525 */
+        @media(max-width:525px) {
+            .toplist-heading h4 {
+                font-size: 21px;
+            }
+    
+            .rating-txt p span,
+            .votes-txt p span {
+                font-size: 14px;
+            }
+    
+            .top-list-btn {
+                margin-top: 24px;
+            }
+    
+            .gamb-logos ul li .btn-logos {
+                width: 8.375rem;
+            }
+    
+        }
+    
+        /* media query 480 */
+    
+        @media(max-width:480px) {
+    
+            .rating-txt p span,
+            .votes-txt p span {
+                font-size: 12px;
+            }
+    
+            .top-list-btn .shopbtn {
+                line-height: normal;
+                padding: 8px 24px;
+            }
+    
+            .visit-btn {
+                padding: 12px 20px;
+            }
+    
+            .Stars {
+                font-size: 18px;
+            }
+    
+            .gamb-logos ul li .btn-logos {
+                width: 6.375rem;
+            }
+    
+            .tp-butn {
+                padding: 0.9375rem 1.875rem 1.125rem;
+            }
+    
+            .rating-wrap p {
+                font-size: 1.1rem;
+    
+            }
+        }
+    
+        /* media query 400 */
+        @media(max-width:400px) {
+            .tp-banner-text-group h2 {
+                font-size: 26px;
+            }
+    
+            .casino-section h2 {
+                font-size: 25px;
+            }
+    
+            .toplist-heading p {
+                font-size: 14px;
+            }
+    
+            .toplist-heading h4 {
+                font-size: 18px;
+            }
+    
+            .tp-butn {
+                padding: 0.875rem;
+            }
+    
+            .rating-wrap p {
+                font-size: 1rem;
+            }
+        }
+    
+        /* media query 350 */
+        @media(max-width:350px) {
+            .top-list-wrap {
+                padding: 15px;
+            }
+    
+            .tp-logo {
+                height: 70px;
+            }
+    
+            .toplist-heading h4 {
+                font-size: 16px;
+                font-weight: 700;
+            }
+    
+            .top-list-btn .shopbtn {
+                padding: 6px 18px;
+            }
+        }
+    
+        /* Tp media query end  */
+    </style>
+</head>
+
+<body class="bg" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="over-lay"></div>
+        <div class="container">
+            <div class="site-navbar">
+                <div class="site-logo">
+                    <a href="./">
+                        <div class="logo-img"></div>
+                    </a>
+                </div>
+                <div class="main-nav">
+
+                    <ul class="ms-auto">
+                        <li class="nav-item">
+                            <a href="./">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./peak-thrills">Frissons en Altitude</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./wave-chasers">Chasseurs de Vagues</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./into-the-wild">Au Cœur de la Nature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./adrenaline-stays">Séjours Adrénaline</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="./high-stakes-escapes">Évasions à Hauts Enjeux</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./about-us">À Propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contact-us">Contactez-nous</a>
+                        </li>
+                    </ul>
+                    <div class="close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                </div>
+                <div class="toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header End -->
+
+   
+<div class="desktop-version">
+
+    <div class="site-banner">
+        <div class="banner-video">
+            <video class="video-background" autoplay="" loop="" muted="">
+                <source src="images/hero-bg.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="banner-wrap">
+            <div class="banner-text aos-init" data-aos="fade-up">
+                <span>Évasions à enjeux élevés</span>
+                <h1 class="banner-title">
+                    Hôtels Casinos
+                </h1>
+                <p class="small-text">
+                    Là où le luxe rencontre l’aventure — les meilleurs hôtels casinos du Canada offrent le parfait mélange d’excitation de jeu, de gastronomie raffinée et de vie nocturne animée. Que vous testiez votre chance aux tables, profitiez d’un traitement VIP ou vous détendiez dans un spa de classe mondiale, ces complexes casinos offrent une expérience inoubliable.
+                </p>
+                <a href="#hotels" class="cta-btn btn-outer mt-4">Explorer les Hôtels Casinos</a>
+
+            </div>
+        </div>
+    </div>
+
+    <section id="hotels" class="hotels-link-sec ptb-100 over-flow-h white-bg">
+        <div class="container">
+            <div class="site-heading aos-init text-center pb-3" data-aos="fade-up">
+                <h3>Meilleurs Hôtels Casinos & Resorts au Canada</h3>
+
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="aos-init" data-aos="fade-right">
+                        <img src="images/high-stakes1.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text aos-init" data-aos="fade-left">
+
+                        <h3 class="small-heading">
+                            Fallsview Casino Resort
+                        </h3>
+                        <p class="tile-disc"><i class="fa fa-map-pin"></i> Emplacement :<strong> Niagara Falls, Ontario</strong></p>
+                        <p class="tile-disc"><i class="fa fa-dollar"></i> Prix par nuit :<strong> 250 $+</strong></p>
+
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Casino immense avec plus de 3 000 machines à sous & 130+ tables</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Vues à couper le souffle sur les chutes du Niagara</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Spa de luxe, gastronomie & spectacles en direct</p>
+
+                        <p class="pt-2">Fallsview Casino Resort est le principal complexe casino du Canada, offrant des jeux à enjeux élevés, des divertissements de classe mondiale et des vues spectaculaires sur les chutes du Niagara. Son spa sur place, ses restaurants haut de gamme et ses options de jeux VIP en font une destination de choix pour les passionnés de casino.</p>
+
+                        <a href="https://expedia.com/affiliates/niagara-falls-hotels-marriott-niagara-falls-fallsview-hotel-spa.1owSW8D"
+                            class="cta-btn btn-outer" target="_blank">Voir l'hôtel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-md-row-reverse align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="aos-init" data-aos="fade-left">
+                        <img src="images/high-stakes2.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text aos-init" data-aos="fade-right">
+
+                        <h3 class="small-heading">
+                            Casino de Montréal – Hôtel Le Dauphine
+                        </h3>
+                        <p class="tile-disc"><i class="fa fa-map-pin"></i> Emplacement :<strong> Montréal, Québec</strong>
+                        </p>
+                        <p class="tile-disc"><i class="fa fa-dollar"></i> Prix par nuit :<strong> 280 $+</strong></p>
+
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Plus grand casino du Canada, avec plus de 3 200 machines à sous</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Poker en direct, tables à hautes limites & salles de jeux privées</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Hébergement 5 étoiles au cœur du Vieux-Montréal</p>
+
+                        <p class="pt-2">Le Casino de Montréal propose des jeux de casino haut de gamme combinés à un séjour de luxe à l’Hôtel Place d’Armes. Profitez de la gastronomie, des terrasses sur le toit et d’expériences VIP exclusives dans l’un des meilleurs hôtels casinos du Canada.</p>
+
+                        <a href="https://expedia.com/affiliates/montreal-hotels-hotel-le-dauphin-montreal-longueuil.U9CyWor"
+                            class="cta-btn btn-outer" target="_blank">Voir l'hôtel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="aos-init" data-aos="fade-right">
+                        <img src="images/high-stakes3.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text aos-init" data-aos="fade-left">
+
+                        <h3 class="small-heading">
+                            River Rock Casino Resort
+                        </h3>
+                        <p class="tile-disc"><i class="fa fa-map-pin"></i> Emplacement :<strong> Richmond (Vancouver), Colombie-Britannique</strong></p>
+                        <p class="tile-disc"><i class="fa fa-dollar"></i> Prix par nuit :<strong> 350 $+</strong></p>
+
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Plus grand complexe casino de la Colombie-Britannique</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Resort en bord de mer avec spa de classe mondiale</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Salles à hautes limites, salon de poker & courses hippiques à proximité</p>
+
+                        <p class="pt-2">Situé près de Vancouver, le River Rock Casino Resort est un hôtel casino haut de gamme offrant des jeux premium, un hébergement 5 étoiles et une vie nocturne animée. Son casino ouvert 24h/24 et son centre de divertissement en font un choix de premier plan pour les amateurs de jeux.</p>
+
+                        <a href="https://greatcanadian.com/destinations/britishcolumbia/riverrock/"
+                            class="cta-btn btn-outer" target="_blank">Voir l'hôtel</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row flex-md-row-reverse align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="aos-init" data-aos="fade-left">
+                        <img src="images/high-stakes4.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text aos-init" data-aos="fade-right">
+
+                        <h3 class="small-heading">
+                            Caesars Windsor Hotel & Casino
+                        </h3>
+                        <p class="tile-disc"><i class="fa fa-map-pin"></i> Emplacement :<strong> Windsor, Ontario</strong>
+                        </p>
+                        <p class="tile-disc"><i class="fa fa-dollar"></i> Prix par nuit :<strong> 220 $+</strong></p>
+
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Casino de style Las Vegas avec plus de 2 300 machines à sous & 85 tables</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Salle de spectacles renommée</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Hôtel de luxe avec gastronomie & vue sur le fleuve</p>
+
+                        <p class="pt-2">Caesars Windsor apporte l’expérience Vegas au Canada, avec des jeux à enjeux élevés, des paris sportifs et des restaurants de chefs célèbres. En tant que l’un des meilleurs resorts casinos du Canada, il s’adresse autant aux joueurs sérieux qu’aux voyageurs de luxe.</p>
+
+                        <a href="https://expedia.com/affiliates/windsor-hotels-caesars-windsor.br8jKuI"
+                            class="cta-btn btn-outer" target="_blank">Voir l'hôtel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="aos-init" data-aos="fade-right">
+                        <img src="images/high-stakes5.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text aos-init" data-aos="fade-left">
+
+                        <h3 class="small-heading">
+                            St. Eugene Golf Resort & Casino
+                        </h3>
+                        <p class="tile-disc"><i class="fa fa-map-pin"></i> Emplacement :<strong> Cranbrook, Colombie-Britannique</strong></p>
+                        <p class="tile-disc"><i class="fa fa-dollar"></i> Prix par nuit :<strong> 180 $+</strong></p>
+
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Hôtel casino boutique dans un bâtiment historique</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Parcours de golf primé & vues sur les Rocheuses</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Spa, restauration & expériences culturelles sur place</p>
+
+                        <p class="pt-2">Pour un mélange unique de jeux de casino et d’aventure en plein air, St. Eugene Golf Resort & Casino est un choix remarquable. Son casino intime, son parcours de golf de championnat et son spa de luxe en font l’un des meilleurs hôtels casinos du Canada pour une escapade détente.</p>
+
+                        <a href="https://expedia.com/affiliates/cranbrook-hotels-st-eugene-golf-resort-casino.WLOHP7i"
+                            class="cta-btn btn-outer" target="_blank">Voir l'hôtel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-md-row-reverse align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="aos-init" data-aos="fade-left">
+                        <img src="images/high-stakes6.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text aos-init" data-aos="fade-left">
+
+                        <h3 class="small-heading">
+                            Grey Eagle Resort & Casino
+                        </h3>
+                        <p class="tile-disc"><i class="fa fa-map-pin"></i> Emplacement :<strong> Calgary, Alberta</strong>
+                        </p>
+                        <p class="tile-disc"><i class="fa fa-dollar"></i> Prix par nuit :<strong> 200 $+</strong></p>
+
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Casino de 7 800 m² avec salon VIP</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Concerts en direct & centre d’événements</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Hébergement de luxe avec vue sur la montagne</p>
+
+                        <p class="pt-2">Grey Eagle Resort & Casino offre l’une des meilleures expériences de resort casino en Alberta, avec jeux non-stop, hébergement de luxe et un pôle de divertissement pour concerts et vie nocturne.</p>
+
+                        <a href="https://expedia.com/affiliates/calgary-hotels-grey-eagle-resort.6Ceb0JL"
+                            class="cta-btn btn-outer" target="_blank">Voir l'hôtel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="aos-init" data-aos="fade-right">
+                        <img src="images/high-stakes7.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text aos-init" data-aos="fade-right">
+
+                        <h3 class="small-heading">
+                            Hilton Lac-Leamy
+                        </h3>
+                        <p class="tile-disc"><i class="fa fa-map-pin"></i> Emplacement :<strong> Gatineau-Ottawa, Québec</strong></p>
+                        <p class="tile-disc"><i class="fa fa-dollar"></i> Prix par nuit :<strong> 260 $+</strong></p>
+
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Hôtel casino haut de gamme avec spa & gastronomie</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Vue sur le lac & options de jeux premium</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Vie nocturne, spectacles d’humour & performances en direct</p>
+
+                        <p class="pt-2">Pour un hôtel casino haut de gamme près d’Ottawa, le Hilton Lac-Leamy est un choix de premier ordre, offrant des jeux VIP, des suites de luxe et des divertissements de haut niveau dans l’un des meilleurs resorts casinos du Québec.</p>
+
+                        <a href="https://expedia.com/affiliates/ottawa-hotels-hilton-lac-leamy.dlETByw"
+                            class="cta-btn btn-outer" target="_blank">Voir l'hôtel</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row flex-md-row-reverse align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="aos-init" data-aos="fade-left">
+                        <img src="images/high-stakes8.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text aos-init" data-aos="fade-left">
+
+                        <h3 class="small-heading">
+                            Pure Casino Yellowhead – Chateau Nova Hotel
+                        </h3>
+                        <p class="tile-disc"><i class="fa fa-map-pin"></i> Emplacement :<strong> Edmonton, Alberta</strong>
+                        </p>
+                        <p class="tile-disc"><i class="fa fa-dollar"></i> Prix par nuit :<strong> 180 $+</strong></p>
+
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Casino complet avec poker, machines à sous & jeux de table</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Options de restauration décontractée & gastronomique</p>
+                        <p class="tile-disc"><i class="fa fa-dot-circle-o"></i> Hébergement de luxe avec équipements modernes</p>
+
+                        <p class="pt-2">Meilleure expérience d’hôtel casino à Edmonton, Pure Casino Yellowhead propose des jeux dynamiques, des paris sportifs et des spectacles en direct, ce qui en fait un incontournable pour les amateurs de casino de l’Ouest canadien.</p>
+
+                        <a href="https://expedia.com/affiliates/yellowknife-hotels-chateau-nova-yellowknife.QiCr7bE"
+                            class="cta-btn btn-outer" target="_blank">Voir l'hôtel</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="over-flow-h ptb-100">
+        <div class="container">
+
+            <div class="row flex-md-row-reverse align-items-center">
+                <div class="col-lg-6 col-md-6 aos-init">
+                    <div class="aos-init" data-aos="fade-left">
+                        <img src="images/high-stakes.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text white-bg aos-init" data-aos="fade-right">
+
+                        <h3 class="small-heading">
+                            À quoi s’attendre dans un hôtel casino
+                        </h3>
+                        <p class="tile-disc mt-3"><i class="fa fa-dot-circle-o"></i> <strong>Jeux & Divertissement</strong> : Profitez d’un accès à des casinos de classe mondiale avec machines à sous, salles de poker et tables à enjeux élevés. De nombreux resorts proposent aussi des spectacles en direct, des bars sur le toit et une gastronomie raffinée.</p>
+
+                        <p class="tile-disc mt-2"><i class="fa fa-dot-circle-o"></i> <strong>Commodités de luxe</strong> : Au-delà du jeu, offrez-vous des soins spa, piscines sur le toit et salons VIP pour un séjour haut de gamme.
+                        </p>
+
+                        <p class="tile-disc mt-2"><i class="fa fa-dot-circle-o"></i> <strong>Meilleur moment pour visiter</strong> : Les week-ends sont idéaux pour la vie nocturne animée, tandis que la semaine offre une expérience plus calme et des tarifs avantageux.</p>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="section ptb-100 over-flow-h white-bg">
+        <div class="container">
+            <div class="site-heading aos-init text-center" data-aos="fade-up">
+                <h3 class="pb-2">Avis des voyageurs</h3>
+                <p class="pb-2">Découvrez ce que les clients disent de leur séjour à enjeux élevés avec Meilleures Aventures.</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="img-box">
+
+
+                        <p>« Le casino était incroyable, et le lounge sur le toit de l’hôtel offrait une vue à couper le souffle ! Tellement heureux d’avoir trouvé cet endroit grâce à Meilleures Aventures ! »
+                        </p>
+                        <h2> – Mark T.</h2>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="img-box">
+
+                        <p>« Des tables de poker au spa de luxe, c’était le parfait mélange d’excitation et de détente. La réservation via ce site a été sans accroc ! »
+                        </p>
+                        <h2>– Jessica P.</h2>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="img-box">
+
+                        <p>« Les options de divertissement étaient incroyables — musique live, jeux à enjeux élevés et gastronomie de haut niveau. J’utiliserai à coup sûr Meilleures Aventures à nouveau ! »
+                        </p>
+                        <h2>– Ryan G.</h2>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="over-flow-h ptb-100">
+        <div class="container">
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 aos-init">
+                    <div class="aos-init" data-aos="fade-left">
+                        <img src="images/gourmet.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="hotel-link-text aos-init" data-aos="fade-right">
+
+                        <h3 class="small-heading">
+                            Pourquoi réserver avec Meilleures Aventures ?
+                        </h3>
+                        <p class="tile-disc mt-3"><i class="fa fa-dot-circle-o"></i> <strong>Hôtels casinos les mieux notés</strong> : Nous ne présentons que les meilleurs resorts casinos et hôtels de jeux au Canada.</p>
+
+                        <p class="tile-disc mt-2"><i class="fa fa-dot-circle-o"></i> <strong>Au-delà des tables</strong> : Séjournez dans des hôtels proposant des spectacles en direct, des restaurants gastronomiques et des expériences VIP.</p>
+
+                        <p class="tile-disc mt-2"><i class="fa fa-dot-circle-o"></i> <strong>Avis fiables & annonces vérifiées</strong> : Trouvez des séjours premium adaptés aux amateurs de sensations fortes et de casinos.</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <div class="explore-sec over-flow-h ptb-100">
+        <div class="banner-video">
+            <video class="video-background" autoplay="" loop="" muted="">
+                <source src="images/flag.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="container">
+            <div class="explore-text aos-init" data-aos="fade-up" data-aos-duration="1300">
+                <h3 class="big-heading">
+                    Réservez votre séjour casino
+                </h3>
+                <p class="tile-disc">
+                    Vivez l’excitation des meilleurs hôtels casinos du Canada, suites de luxe et divertissements haut de gamme dès aujourd’hui !
+
+                </p>
+
+                <a href="/contact-us" class="cta-btn btn-outer mt-4" target="_blank">Explorer les Hôtels Casinos</a>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <section class="over-flow-h ptb-100 white-bg text-center">
+        <div class="container">
+            <div class="site-heading aos-init text-center pb-4" data-aos="fade-up">
+                <h3>FAQ</h3>
+
+            </div>
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12">
+
+
+                    <h3 class="small-heading">
+                        Quel est le meilleur moment pour visiter un hôtel casino ?
+                    </h3>
+                    <p class="pb-2">Les week-ends sont parfaits pour la vie nocturne, tandis que la semaine offre des tarifs plus bas et moins de foule.</p>
+
+                    <h3 class="small-heading">
+                        Les hôtels casinos proposent-ils des activités hors-jeu ?
+                    </h3>
+                    <p class="pb-2">Oui ! De nombreux resorts disposent de spas, de parcours de golf, de piscines et de restaurants gastronomiques.</p>
+
+                    <h3 class="small-heading">
+                        Existe-t-il des hôtels casinos tout compris ?
+                    </h3>
+                    <p class="">Certains resorts casinos proposent des forfaits incluant des crédits de jeu, des repas et l’accès au spa.</p>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+</div>
+
+
+<!-- mobile  tp Start -->
+
+<div class="mobile-view">
+    <section class="tp-banner" style="background-image:url(images/tp-banner.jpg)">
+        <div class="tp-banner-text">
+            <div class="tp-banner-text-group">
+                <h2>
+                    Meilleurs sites de paris au Canada
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+
+        <!-- Betovo start-->
+        <div class="top-list">
+            <div class="top-list-wrap">
+                <div class="toplist-left">
+                    <div class="tp-logo logo_betovo">
+                        <a href="https://btvo.fynkelto.com/?mid=243395_1544347" class="twentybet" target="_blank"
+                            style="background-image: url(images/betovo_logo.jpg)">
+                        </a>
+                    </div>
+                    <div class="rating-wrap">
+                        <div class="rating-txt">
+                            <p>
+                                Note : <span>9.9</span>
+                            </p>
+                        </div>
+                        <div class="votes-txt">
+                            <p>
+                                Votes : <span>(957)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Stars Stars--rating99"></div>
+                </div>
+
+                <div class="toplist-right">
+                    <div class="toplist-heading">
+                        <a href="https://btvo.fynkelto.com/?mid=243395_1544347" target="_blank">
+                            <h4>Bonus de bienvenue</h4>
+                            <p>
+                                Jusqu'à 375 $ en paris gratuits
+                            </p>
+                        </a>
+                    </div>
+                    <div class="top-list-btn">
+                        <a href="https://btvo.fynkelto.com/?mid=243395_1544347" target="_blank" class="btn">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Betovo end -->
+
+        <!--20bet start-->
+        <div class="top-list">
+            <div class="top-list-wrap">
+                <div class="toplist-left">
+                    <div class="tp-logo logo_twentybet">
+                        <a href="https://mu.fastmui.com/redirect.aspx?pid=377387&bid=1971&lpid=860" class="twentybet"
+                            target="_blank" style="background-image: url(images/20bet.png)">
+                        </a>
+                    </div>
+                    <div class="rating-wrap">
+                        <div class="rating-txt">
+                            <p>
+                                Note : <span>9.9</span>
+                            </p>
+                        </div>
+                        <div class="votes-txt">
+                            <p>
+                                Votes : <span>(957)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Stars Stars--rating99"></div>
+                </div>
+
+                <div class="toplist-right">
+                    <div class="toplist-heading">
+                        <a href="https://mu.fastmui.com/redirect.aspx?pid=377387&bid=1971&lpid=860" target="_blank">
+                            <h4>Bonus de bienvenue</h4>
+                            <p>
+                                Paris gratuits lors d’un dépôt de 40 $
+                            </p>
+                        </a>
+                    </div>
+                    <div class="top-list-btn">
+                        <a href="https://mu.fastmui.com/redirect.aspx?pid=377387&bid=1971&lpid=860" target="_blank"
+                            class="btn">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- 20bet end -->
+
+
+        <!-- Bassbet start-->
+        <div class="top-list">
+            <div class="top-list-wrap">
+                <div class="toplist-left">
+                    <div class="tp-logo logo_bassbet">
+                        <a href="https://bsbt.fynkelto.com/?mid=72961_1531143" class="basbet" target="_blank"
+                            style="background-image: url(images/bassbet-logo.jpg)">
+                        </a>
+                    </div>
+                    <div class="rating-wrap">
+                        <div class="rating-txt">
+                            <p>
+                                Note : <span>9.8</span>
+                            </p>
+                        </div>
+                        <div class="votes-txt">
+                            <p>
+                                Votes : <span>(957)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Stars Stars--rating99"></div>
+                </div>
+
+                <div class="toplist-right">
+                    <div class="toplist-heading">
+                        <a href="https://bsbt.fynkelto.com/?mid=72961_1531143" target="_blank">
+                            <h4>Bonus de bienvenue</h4>
+                            <p>
+                                Déposez 40 $ et pariez avec 80 $
+                            </p>
+                        </a>
+                    </div>
+                    <div class="top-list-btn">
+                        <a href="https://bsbt.fynkelto.com/?mid=72961_1531143" target="_blank" class="btn">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Bassbet end -->
+
+        <!-- Ivibet start-->
+        <div class="top-list">
+            <div class="top-list-wrap">
+                <div class="toplist-left">
+                    <div class="tp-logo logo_ivibet">
+                        <a href="https://top.aglobally.com/redirect.aspx?pid=53672&bid=1478&lpid=51" class="twentybet"
+                            target="_blank" style="background-image: url(images/ivibet-logo.jpg)">
+                        </a>
+                    </div>
+                    <div class="rating-wrap">
+                        <div class="rating-txt">
+                            <p>
+                                Note : <span>9.8</span>
+                            </p>
+                        </div>
+                        <div class="votes-txt">
+                            <p>
+                                Votes : <span>(957)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Stars Stars--rating99"></div>
+                </div>
+
+                <div class="toplist-right">
+                    <div class="toplist-heading">
+                        <a href="https://top.aglobally.com/redirect.aspx?pid=53672&bid=1478&lpid=51" target="_blank">
+                            <h4>Bonus de bienvenue</h4>
+                            <p>
+                                Déposez 50 $ et recevez un pari gratuit de 50 $
+                            </p>
+                        </a>
+                    </div>
+                    <div class="top-list-btn">
+                        <a href="https://top.aglobally.com/redirect.aspx?pid=53672&bid=1478&lpid=51" target="_blank"
+                            class="btn">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Ivibet end -->
+
+
+
+
+
+
+        <!--888 start-->
+        <div class="top-list">
+            <div class="top-list-wrap">
+                <div class="toplist-left">
+                    <div class="tp-logo logo_eight">
+                        <a href="https://ic.aff-handler.com/C/48132?sr=2009891" class="twentybet" target="_blank"
+                            style="background-image: url(images/888logo_orange.png)">
+                        </a>
+                    </div>
+                    <div class="rating-wrap">
+                        <div class="rating-txt">
+                            <p>
+                                Note : <span>9.7</span>
+                            </p>
+                        </div>
+                        <div class="votes-txt">
+                            <p>
+                                Votes : <span>(957)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Stars Stars--rating99"></div>
+                </div>
+
+                <div class="toplist-right">
+                    <div class="toplist-heading">
+                        <a href="https://ic.aff-handler.com/C/48132?sr=2009891" target="_blank">
+                            <h4>Bonus de bienvenue</h4>
+                            <p>
+                                Jusqu'à 500 $ en paris gratuits
+                            </p>
+                        </a>
+                    </div>
+                    <div class="top-list-btn">
+                        <a href="https://ic.aff-handler.com/C/48132?sr=2009891" target="_blank" class="btn">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- 888 end -->
+
+        <!--Supabet start-->
+        <!-- <div class="top-list">
+            <div class="top-list-wrap">
+                <div class="toplist-left">
+                    <div class="tp-logo logo_supabet">
+                        <a href="https://spab.virelon.com/?mid=175089_1531167" class="twentybet" target="_blank"
+                            style="background-image: url(images/supabet-logo.svg)">
+                        </a>
+                    </div>
+                    <div class="rating-wrap">
+                        <div class="rating-txt">
+                            <p>
+                                Note : <span>9.7</span>
+                            </p>
+                        </div>
+                        <div class="votes-txt">
+                            <p>
+                                Votes : <span>(957)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Stars Stars--rating99"></div>
+                </div>
+
+                <div class="toplist-right">
+                    <div class="toplist-heading">
+                        <a href="https://spab.virelon.com/?mid=175089_1531167" target="_blank">
+                            <h4>Bonus de bienvenue</h4>
+                            <p>
+                                100% jusqu'à 150 $
+                            </p>
+                        </a>
+                    </div>
+                    <div class="top-list-btn">
+                        <a href="https://spab.virelon.com/?mid=175089_1531167" target="_blank" class="btn">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div> -->
+        <!-- Supabet end -->
+
+        <!-- 22bet start-->
+        <div class="top-list">
+            <div class="top-list-wrap">
+                <div class="toplist-left">
+                    <div class="tp-logo logo_twentybets">
+                        <a href="https://moy.auraodin.com/redirect.aspx?pid=129670&bid=1553&lpid=189" class="twentybet"
+                            target="_blank" style="background-image: url(images/22bet.jpg)">
+                        </a>
+                    </div>
+                    <div class="rating-wrap">
+                        <div class="rating-txt">
+                            <p>
+                                Note : <span>9.7</span>
+                            </p>
+                        </div>
+                        <div class="votes-txt">
+                            <p>
+                                Votes : <span>(957)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Stars Stars--rating99"></div>
+                </div>
+
+                <div class="toplist-right">
+                    <div class="toplist-heading">
+                        <a href="https://moy.auraodin.com/redirect.aspx?pid=129670&bid=1553&lpid=189" target="_blank">
+                            <h4>Bonus de bienvenue</h4>
+                            <p>
+                                100% jusqu'à 350 $
+                            </p>
+                        </a>
+                    </div>
+                    <div class="top-list-btn">
+                        <a href="https://moy.auraodin.com/redirect.aspx?pid=129670&bid=1553&lpid=189" target="_blank"
+                            class="btn">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 22bet end -->
+
+        <!-- Tonybet start-->
+        <div class="top-list">
+            <div class="top-list-wrap">
+                <div class="toplist-left">
+                    <div class="tp-logo logo_tonybet">
+                        <a href="https://dro.kagonst.com/redirect.aspx?pid=174216&lpid=1671&bid=2035" class="twentybet"
+                            target="_blank" style="background-image: url(images/tonybet-logo.png)">
+                        </a>
+                    </div>
+                    <div class="rating-wrap">
+                        <div class="rating-txt">
+                            <p>
+                                Note : <span>9.6</span>
+                            </p>
+                        </div>
+                        <div class="votes-txt">
+                            <p>
+                                Votes : <span>(957)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Stars Stars--rating99"></div>
+                </div>
+
+                <div class="toplist-right">
+                    <div class="toplist-heading">
+                        <a href="https://dro.kagonst.com/redirect.aspx?pid=174216&lpid=1671&bid=2035" target="_blank">
+                            <h4>Bonus de bienvenue</h4>
+                            <p>
+                                Bonus exclusif de 700 $, utilisez le code TonyFer
+                            </p>
+                        </a>
+                    </div>
+                    <div class="top-list-btn">
+                        <a href="https://dro.kagonst.com/redirect.aspx?pid=174216&lpid=1671&bid=2035" target="_blank"
+                            class="btn">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Tonybet end -->
+
+
+        <!--Cashed start-->
+        <!-- <div class="top-list">
+            <div class="top-list-wrap">
+                <div class="toplist-left">
+                    <div class="tp-logo logo_cashed">
+                        <a href="https://cshd.lunostra.com/?mid=144521_1531177" class="twentybet" target="_blank"
+                            style="background-image: url(images/cashed-new.png)">
+                        </a>
+                    </div>
+                    <div class="rating-wrap">
+                        <div class="rating-txt">
+                            <p>
+                                Note : <span>9.7</span>
+                            </p>
+                        </div>
+                        <div class="votes-txt">
+                            <p>
+                                Votes : <span>(957)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Stars Stars--rating99"></div>
+                </div>
+
+                <div class="toplist-right">
+                    <div class="toplist-heading">
+                        <a href="https://cshd.lunostra.com/?mid=144521_1531177" target="_blank">
+                            <h4>Bonus de bienvenue</h4>
+                            <p>
+                                100% jusqu'à 150 $
+                            </p>
+                        </a>
+                    </div>
+                    <div class="top-list-btn">
+                        <a href="https://cshd.lunostra.com/?mid=144521_1531177" target="_blank" class="btn">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+         </div> -->
+        <!-- Cashed end -->
+
+        <div class="bottom_cards mt-5">
+
+            <h3 class="mb-5 text-center">
+                Meilleurs sites de casino au Canada
+            </h3>
+
+            <!-- Bizzo -->
+            <div class="top-list">
+                <div class="top-list-wrap">
+                    <div class="toplist-left">
+                        <div class="tp-logo logo_bizzo">
+                            <a href="https://mu.fastmui.com/redirect.aspx?pid=378913&bid=2058&lpid=993" class="bizzo" target="_blank"
+                                style="background-image: url(images/bizzo-logo-svg.jpg)">
+                            </a>
+                        </div>
+                        <div class="rating-wrap">
+                            <div class="rating-txt">
+                                <p>
+                                    Note : <span>9.9</span>
+                                </p>
+                            </div>
+                            <div class="votes-txt">
+                                <p>
+                                    Votes : <span>(957)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="Stars Stars--rating99"></div>
+                    </div>
+
+                    <div class="toplist-right">
+                        <div class="toplist-heading">
+                            <a href="https://mu.fastmui.com/redirect.aspx?pid=378913&bid=2058&lpid=993" target="_blank">
+                                <h4>Bonus de bienvenue</h4>
+                                <p>
+                                    Jusqu'à 1 250 $ + 125 tours gratuits
+                                </p>
+                            </a>
+                        </div>
+                        <div class="top-list-btn">
+                            <a href="https://mu.fastmui.com/redirect.aspx?pid=378913&bid=2058&lpid=993" target="_blank" class="btn">
+                                S'INSCRIRE
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Bizzo  -->
+
+
+            <!-- Jet4bet-->
+            <div class="top-list">
+                <div class="top-list-wrap">
+                    <div class="toplist-left">
+                        <div class="tp-logo logo_jetforjet">
+                            <a href="https://jet4betmedia.com/n1dd055022" class="jetforjet" target="_blank"
+                                style="background-image: url(images/jet4bet-logo.jpg)">
+                            </a>
+                        </div>
+                        <div class="rating-wrap">
+                            <div class="rating-txt">
+                                <p>
+                                    Note : <span>9.9</span>
+                                </p>
+                            </div>
+                            <div class="votes-txt">
+                                <p>
+                                    Votes : <span>(957)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="Stars Stars--rating99"></div>
+                    </div>
+
+                    <div class="toplist-right">
+                        <div class="toplist-heading">
+                            <a href="https://jet4betmedia.com/n1dd055022" target="_blank">
+                                <h4>Bonus de bienvenue</h4>
+                                <p>
+                                    3 000 $ de bonus + 200 tours gratuits
+                                </p>
+                            </a>
+                        </div>
+                        <div class="top-list-btn">
+                            <a href="https://jet4betmedia.com/n1dd055022" target="_blank" class="btn">
+                                S'INSCRIRE
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Jet4bet -->
+
+
+            <!-- Goldspin-->
+            <div class="top-list">
+                <div class="top-list-wrap">
+                    <div class="toplist-left">
+                        <div class="tp-logo logo_goldspin">
+                            <a href="https://gdspn.fynkelto.com/?mid=243336_1544279" class="legiano_btm" target="_blank"
+                                style="background-image: url(images/goldspin_logo.svg)">
+                            </a>
+                        </div>
+                        <div class="rating-wrap">
+                            <div class="rating-txt">
+                                <p>
+                                    Note : <span>9.8</span>
+                                </p>
+                            </div>
+                            <div class="votes-txt">
+                                <p>
+                                    Votes : <span>(957)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="Stars Stars--rating99"></div>
+                    </div>
+
+                    <div class="toplist-right">
+                        <div class="toplist-heading">
+                            <a href="https://gdspn.fynkelto.com/?mid=243336_1544279" target="_blank">
+                                <h4>Bonus de bienvenue</h4>
+                                <p>
+                                    2 250 $ de bonus + 100 tours gratuits
+                                </p>
+                            </a>
+                        </div>
+                        <div class="top-list-btn">
+                            <a href="https://gdspn.fynkelto.com/?mid=243336_1544279" target="_blank" class="btn">
+                                S'INSCRIRE
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Goldspin -->
+
+
+
+
+            <!-- Luckydays -->
+            <div class="top-list">
+                <div class="top-list-wrap">
+                    <div class="toplist-left">
+                        <div class="tp-logo logo_luckydays">
+                            <a href="https://media.luckydaysaffiliates.com/redirect.aspx?pid=13483&bid=1623"
+                                class="bizzo" target="_blank" style="background-image: url(images/luckydays-logo.png)">
+                            </a>
+                        </div>
+                        <div class="rating-wrap">
+                            <div class="rating-txt">
+                                <p>
+                                    Note : <span>9.7</span>
+                                </p>
+                            </div>
+                            <div class="votes-txt">
+                                <p>
+                                    Votes : <span>(957)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="Stars Stars--rating99"></div>
+                    </div>
+
+                    <div class="toplist-right">
+                        <div class="toplist-heading">
+                            <a href="https://media.luckydaysaffiliates.com/redirect.aspx?pid=13483&bid=1623"
+                                target="_blank">
+                                <h4>Bonus de bienvenue</h4>
+                                <p>
+                                    1 500 $ + 100 tours gratuits
+                                </p>
+                            </a>
+                        </div>
+                        <div class="top-list-btn">
+                            <a href="https://media.luckydaysaffiliates.com/redirect.aspx?pid=13483&bid=1623"
+                                target="_blank" class="btn">
+                                S'INSCRIRE
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Luckydays  -->
+
+
+            <!-- Spinit -->
+            <div class="top-list">
+                <div class="top-list-wrap">
+                    <div class="toplist-left">
+                        <div class="tp-logo logo_spinit">
+                            <a href="https://swp.fynkelto.com/?mid=75042_1544307" class="bizzo" target="_blank"
+                                style="background-image: url(images/spinit_logo.jpg)">
+                            </a>
+                        </div>
+                        <div class="rating-wrap">
+                            <div class="rating-txt">
+                                <p>
+                                    Note : <span>9.6</span>
+                                </p>
+                            </div>
+                            <div class="votes-txt">
+                                <p>
+                                    Votes : <span>(957)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="Stars Stars--rating99"></div>
+                    </div>
+
+                    <div class="toplist-right">
+                        <div class="toplist-heading">
+                            <a href="https://swp.fynkelto.com/?mid=75042_1544307" target="_blank">
+                                <h4>Bonus de bienvenue</h4>
+                                <p>
+                                    750 $ de bonus + 200 tours gratuits
+                                </p>
+                            </a>
+                        </div>
+                        <div class="top-list-btn">
+                            <a href="https://swp.fynkelto.com/?mid=75042_1544307" target="_blank" class="btn">
+                                S'INSCRIRE
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Spinit  -->
+
+        </div>
+
+
+    </div>
+
+
+    <div class="tp-bottom-text-section">
+        <div class="container">
+            <div class="tp-bottom-text-wrapper">
+                <h3>Comparez les meilleurs sites de paris sportifs et bookmakers au Canada</h3>
+                <p>
+                    Vous cherchez les meilleurs sites de paris sportifs au Canada ? Meilleures Aventures vous aide à comparer les principaux bookmakers canadiens qui offrent des cotes compétitives, des promotions attractives et une expérience de pari fluide. De la LNH et la LCF au football international et à l’esport, nous mettons en avant les meilleures plateformes de paris plébiscitées par les joueurs canadiens.
+                </p>
+
+                <p>
+                    Comment choisir le meilleur site de paris sportifs
+                </p>
+
+                <ul>
+                    <li>
+                        ✅ Bookmakers fiables & agréés – Nous ne présentons que des sites légaux et réglementés qui respectent les normes strictes de sécurité et de conformité du Canada.
+                    </li>
+                    <li>
+                        ✅ Plateformes conviviales – Une interface claire et un design intuitif rendent les paris sportifs simples et agréables.
+
+                    </li>
+
+                    <li>
+                        ✅ Marchés de paris étendus – Accédez aux meilleures cotes sur le hockey, le football, le basket, le tennis, les sports mécaniques, l’esport et plus encore.
+
+                    </li>
+                    <li>
+                        ✅ Meilleurs bonus & promotions – Boostez vos paris avec des offres de bienvenue généreuses, des paris gratuits et des promos continues des meilleurs bookmakers.
+                    </li>
+
+                    <li>
+                        ✅ Paiements rapides & sécurisés – Retirez vos gains rapidement grâce à des options fiables comme Interac, les portefeuilles électroniques et les virements bancaires.
+                    </li>
+
+                    <h3>
+                        Trouvez les meilleurs sites de paris sportifs au Canada
+                    </h3>
+
+                    <p>
+                        Avec Meilleures Aventures, découvrir les meilleurs bookmakers au Canada est simple. Que vous soyez débutant ou parieur expérimenté, nos avis d’experts et comparatifs détaillés vous aident à choisir le site de paris qui vous convient. Commencez dès aujourd’hui avec les sites de paris canadiens les mieux notés et placez des paris plus avisés !
+                    </p>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- mobile tp end  -->
+
+
+
+
+    <section class="section disclaimer pt-4 pb-3 text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h4>Avertissement</h4>
+					<p>Meilleures Aventures fournit des informations sur des hôtels axés sur l’aventure au Canada. Bien que nous nous efforcions d’assurer l’exactitude, les détails, prix et disponibilités des hôtels peuvent changer sans préavis. Nous ne garantissons pas la qualité des services proposés par les hôtels listés. Certains liens peuvent être affiliés, mais nos avis restent indépendants. Nous ne proposons pas de service de réservation directe : tout problème doit être traité avec l’hôtel ou la plateforme de réservation concernée.</p>
+				</div>
+			</div>					
+		</div>
+	</section>
+    E:\Lakhvir\MeilleuresAventures\contact-us.html
+    
+<!-- Cookie -->
+<div id="newcookies">
+    <div class="container">
+        <div class="d-flex justify-content-around flex-column align-items-center pdb-3">
+            <div>
+                <p>Notre site utilise des cookies pour mémoriser vos préférences et visites répétées afin de vous offrir la meilleure expérience. En cliquant sur « OK », vous acceptez l’utilisation de tous les cookies.</p>
+            </div>
+            <button type="button" class="cta-btn btn-outer modalBtn" data-dismiss="modal" >OK</button>
+        </div>
+    </div>
+</div>
+<!-- Cookie -->
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+
+</html>
