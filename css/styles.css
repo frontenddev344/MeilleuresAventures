@@ -1230,3 +1230,41 @@ text-align:center;
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
+
+/* Video fallback styles */
+.video-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Hide fallback when video is playing */
+video:not([paused]) ~ .video-fallback {
+    display: none;
+}
+
+/* Ensure video container has proper positioning */
+.banner-video {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Alternative approach: replace video with background image on mobile */
+@media (max-width: 768px) {
+    .banner-video video {
+        display: none;
+    }
+    
+    .banner-video {
+        background-image: url('../images/banner-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
